@@ -7,9 +7,12 @@ import LifeService from "../pages/LifeService";
 import Shop from "../pages/Shop";
 import User from "../pages/User";
 
+import BottomNav from "../components/BottomNav";
+
 const AppRouter = () => {
   return (
     <Router>
+      <BottomNav/>
       <Routes>
         <Route exact path="/" element={ <Home/> }></Route>
         <Route path="life/*" element={ <LifeService/> }></Route>
