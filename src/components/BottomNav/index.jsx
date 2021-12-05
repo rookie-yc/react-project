@@ -7,7 +7,7 @@ const BottomNav = () => {
     <div className="nav-footer">
       <ul className="clear-fix">
         <li>
-          <NavLink exact to="/">
+          <NavLink exact="true" to="/">
             <i className="iconfont icon-home"></i>
             首页
           </NavLink>

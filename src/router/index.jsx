@@ -14,7 +14,7 @@ const AppRouter = () => {
     <Router>
       <BottomNav/>
       <Routes>
-        <Route exact path="/" element={ <Home/> }></Route>
+        <Route path="/" element={ <Home/> }></Route>
         <Route path="life/*" element={ <LifeService/> }></Route>
         <Route path="shop/*" element={ <Shop/>}></Route>
         <Route path="user/*" element={ <User/> }></Route>
