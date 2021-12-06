@@ -2,7 +2,7 @@ import React from "react";
 
 import { HashRouter as Router, Route, Routes } from 'react-router-dom'
 
-import Home from "../pages/Home";
+import Home from "../pages/Home/HomeHotView";
 import LifeService from "../pages/LifeService";
 import Shop from "../pages/Shop";
 import User from "../pages/User";

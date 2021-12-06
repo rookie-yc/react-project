@@ -5,7 +5,9 @@ import axios from "../utils/request";
  */
 
 const base = {
-
+  baseUrl:"http://localhost:5566",
+  homehot1:"/api/home/hot1",
+  homehot2:"/api/home/hot2",
 }
 
 /**
@@ -13,7 +15,13 @@ const base = {
  */
 
 const api = {
-
+  // 获取首页热门商品
+  getHomeHot1() {
+    return axios.get(base.baseUrl + base.homehot1)
+  },
+  getHomeHot2() {
+    return axios.get(base.baseUrl + base.homehot2)
+  }
 }
 
 export default api;
