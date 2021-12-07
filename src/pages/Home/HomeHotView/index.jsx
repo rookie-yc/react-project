@@ -1,19 +1,28 @@
-import React from "react";
-import HeaderNav from "../../../components/HeaderNav";
-import Swiper from "../../../components/Swiper";
-import Banner1 from "../../../assets/images/banner1.png";
-import Banner2 from "../../../assets/images/banner2.png";
-import Banner3 from "../../../assets/images/banner3.png";
-import HomeHotList from "../HomeHotList";
+import React from "react"
+import "./style.less"
 
-const Home = () => {
-  return (
-    <div>
-      <HeaderNav/>
-      <Swiper banners={[Banner1, Banner2, Banner3]}/>
-      <HomeHotList/>
-    </div>
-  )
+const HomeHotView = (props) => {
+    return (
+        <div className="hotproduct">
+            <h3>{ props.title }</h3>
+            <div className="hot-container">
+                <ul className="clear-fix">
+                    {
+                        props.data.map((element, index) => {
+                            return (
+                                <li key={index}>
+                                    <a href={element.link}>
+                                        <img src={element.img} alt="" />
+                                        <span>{element.title}</span>
+                                    </a>
+                                </li>
+                            )
+                        })
+                    }
+                </ul>
+            </div>
+        </div>
+    )
 }
 
-export default Home;
+export default HomeHotView

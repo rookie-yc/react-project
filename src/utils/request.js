@@ -67,10 +67,10 @@ instance.interceptors.request.use(
 instance.interceptors.response.use(
     // 完成了
     response => response.status === 200 ? Promise.resolve(response) : Promise.reject(response),
-    // error => {
-    //     const { response } = error;
-    //     errorHandle(response.status,response.info);
-    // }
+    error => {
+        const { response } = error;
+        errorHandle(response.status,response.info);
+    }
 )
 
 

@@ -5,7 +5,7 @@ import axios from "../utils/request";
  */
 
 const base = {
-  baseUrl:"http://localhost:5566",
+  baseUrl:"http://localhost:7788",
   homehot1:"/api/home/hot1",
   homehot2:"/api/home/hot2",
 }
