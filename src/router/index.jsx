@@ -2,22 +2,25 @@ import React from "react";
 
 import { HashRouter as Router, Route, Routes } from 'react-router-dom'
 
-import Home from "../pages/Home";
-import LifeService from "../pages/LifeService";
-import Shop from "../pages/Shop";
-import User from "../pages/User";
+import Layout from "../pages/Main/Layout";
 
-import BottomNav from "../components/BottomNav";
+import Home from "../pages/Main/Home";
+import LifeService from "../pages/Main/LifeService";
+import Shop from "../pages/Main/Shop";
+import User from "../pages/Main/User";
+import City from "../pages/City";
 
 const AppRouter = () => {
   return (
     <Router>
-      <BottomNav/>
       <Routes>
-        <Route path="/" element={ <Home/> }></Route>
-        <Route path="life/*" element={ <LifeService/> }></Route>
-        <Route path="shop/*" element={ <Shop/>}></Route>
-        <Route path="user/*" element={ <User/> }></Route>
+        <Route path="/" element={ <Layout/> }>
+          <Route index element={ <Home/> }></Route>
+          <Route path="life/*" element={ <LifeService/> }></Route>
+          <Route path="shop/*" element={ <Shop/> }></Route>
+          <Route path="user/*" element={ <User/> }></Route>
+        </Route>
+        <Route path="city/*" element={ <City/> }></Route>
       </Routes>
     </Router>
   );
