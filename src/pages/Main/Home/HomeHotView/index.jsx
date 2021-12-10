@@ -13,7 +13,7 @@ const HomeHotView = (props) => {
                                 <li key={index}>
                                     <a href={element.link}>
                                         <img src={element.img} alt="" />
-                                        <span>{element.title}</span>
+                                        <span>{ props.city + element.title}</span>
                                     </a>
                                 </li>
                             )

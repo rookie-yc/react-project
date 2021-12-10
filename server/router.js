@@ -1,20 +1,29 @@
 const express = require("express");
 const router = express.Router();
-const homehot = require("./data/home/homehot");
+const homehot = require("./data/home/homehot")
+const url = require("url")
 
-router.get("/home/hot1", (req, res) => {
-  res.send({
-    status:200,
-    result:homehot.hot1
-  })
-});
+/**
+ * 首页热门数据
+ */
+router.get("/home/hot1",(req,res) =>{
+    const cityName = url.parse(req.url,true).query.cityName
+    res.send({
+        status:200,
+        result:homehot.hot1,
+        city:cityName
+    })
+})
 
-router.get("/home/hot2", (req, res) => {
-  res.send({
-    status:200,
-    result:homehot.hot2
-  })
-});
+router.get("/home/hot2",(req,res) =>{
+    const cityName = url.parse(req.url,true).query.cityName
+    console.log(cityName)
+    res.send({
+        status:200,
+        result:homehot.hot2,
+        city:cityName
+    })
+})
 
 
 module.exports = router;
