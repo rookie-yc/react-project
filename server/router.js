@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const homehot = require("./data/home/homehot")
 const url = require("url")
+const searchData = require("./data/search")
 
 /**
  * 首页热门数据
@@ -22,6 +23,15 @@ router.get("/home/hot2",(req,res) =>{
         status:200,
         result:homehot.hot2,
         city:cityName
+    })
+})
+
+router.get("/search", (req, res) => {
+    const search = url.parse(req.url,true).query.search;
+    console.log(search);
+    res.send({
+        status:200,
+        result:searchData
     })
 })
 

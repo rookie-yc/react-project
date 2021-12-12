@@ -12,7 +12,7 @@ const HomeHotList = (props) =>{
      * 获取hot1
      */
     useEffect(() =>{
-        api.getHomeHot1({
+        api.getHomtHot1({
             cityName:props.cityName
         }).then(res =>{
             if(res.data.status === 200){
@@ -26,7 +26,7 @@ const HomeHotList = (props) =>{
      * 获取hot2
      */
     useEffect(() =>{
-        api.getHomeHot2({
+        api.getHomtHot2({
             cityName:props.cityName
         }).then(res =>{
             if(res.data.status === 200){

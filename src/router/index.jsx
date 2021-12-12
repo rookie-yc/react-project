@@ -9,6 +9,7 @@ import LifeService from "../pages/Main/LifeService";
 import Shop from "../pages/Main/Shop";
 import User from "../pages/Main/User";
 import City from "../pages/City";
+import Search from "../pages/Search"
 
 const AppRouter = () => {
   return (
@@ -21,6 +22,7 @@ const AppRouter = () => {
           <Route path="user/*" element={ <User/> }></Route>
         </Route>
         <Route path="city/*" element={ <City/> }></Route>
+        <Route path="search/:keywords" element={ <Search/> }></Route>
       </Routes>
     </Router>
   );

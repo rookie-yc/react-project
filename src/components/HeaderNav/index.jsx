@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.less"
+import SearchIput from "../SearchIput";
 import { Link } from "react-router-dom";
 
 const HeaderNav = (props) => {
@@ -18,7 +19,7 @@ const HeaderNav = (props) => {
       <div className="home-header-middle">
         <div className="search-container">
           <i className="icon-search"></i>
-          <input />
+          <SearchIput />
         </div>
       </div>
     </div>
