@@ -3,7 +3,6 @@ import Item from "./Item";
 
 
 const SearchView = (props) => {
-  console.log(props.search)
   return(
     <div>
       {

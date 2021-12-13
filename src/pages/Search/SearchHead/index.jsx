@@ -1,6 +1,7 @@
 import React from "react"
 import "./style.less"
 import SearchIput from "../../../components/SearchIput"
+import LoadMore from "../../../components/LoadMore"
 
 const SearchHeader = () => {
 
