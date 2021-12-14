@@ -8,7 +8,8 @@ const base = {
     cityUrl:"/api/aj/getcitycode",
     homehot1:"/api/home/hot1",
     homehot2:"/api/home/hot2",
-    search:"/api/search"
+    search:"/api/search",
+    details:"api/details"
 }
 
 
@@ -40,7 +41,13 @@ const api = {
         return axios.get(base.baseUrl + base.search,{
             params
         })
-    }
+    },
+    details(params){
+        return axios.get(base.baseUrl + base.details,{
+            params
+        })
+    },
+
 }
 
 export default api;
