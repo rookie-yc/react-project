@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router";
+import DetailsList from "./DetailsList";
 
 const Details = () => {
 
@@ -7,7 +8,7 @@ const Details = () => {
 
   return(
     <div>
-      详情页:{ params.id }
+      <DetailsList id={params.id}/>
     </div>
   )
 }
