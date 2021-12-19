@@ -5,6 +5,7 @@ const url = require("url")
 const searchData = require("./data/search")
 const detailsData = require("./data/details");
 const Mock = require("mockjs")
+const commentData = require("./data/comment")
 
 const Random = Mock.Random;
 
@@ -72,4 +73,14 @@ router.post("/login",(req,res) =>{
         })
     }
 })
+
+router.get("/comment",(req,res) =>{
+    const id = url.parse(req.url).query.id;
+    console.log(id);
+    res.send({
+        status:200,
+        result:commentData
+    })
+})
+
 module.exports = router;

@@ -11,6 +11,7 @@ const base = {
     search:"/api/search",
     details:"/api/details",
     login:"/api/login",
+    comment:"/api/comment",
 }
 
 
@@ -51,7 +52,11 @@ const api = {
     login(params){
         return axios.post(base.baseUrl + base.login,params)
     },
-
+    comment(params){
+        return axios.get(base.baseUrl + base.comment,{
+            params
+        })
+    }
 }
 
 export default api;
