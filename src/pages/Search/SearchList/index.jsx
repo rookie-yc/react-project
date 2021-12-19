@@ -29,6 +29,11 @@ const SearchList = (props) => {
 
   useEffect(() => {
     http();
+
+    return () => {
+      setSearchData([]);
+      setHasMore(false);
+    }
   }, [props.search])
 
   return(

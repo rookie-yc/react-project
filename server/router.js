@@ -57,4 +57,19 @@ router.get("/details",(req,res) =>{
     res.send(detailsData)
 })
 
+router.post("/login",(req,res) =>{
+    const { username,password } = req.body;
+    if(username && password){
+        res.send({
+            status:200,
+            token:"enjy23rsdfe3fsveq.23r23sfdvfv.asdfqf4ag34ghdfjtkjhq",
+            nick:username
+        })
+    }else{
+        res.send({
+            status:400,
+            msg:'用户名密码错误'
+        })
+    }
+})
 module.exports = router;

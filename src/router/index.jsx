@@ -9,8 +9,9 @@ import LifeService from "../pages/Main/LifeService";
 import Shop from "../pages/Main/Shop";
 import User from "../pages/Main/User";
 import City from "../pages/City";
-import Search from "../pages/Search"
+import Search from "../pages/Search";
 import Details from "../pages/Details";
+import Login from "../pages/Login";
 
 const AppRouter = () => {
   return (
@@ -24,6 +25,7 @@ const AppRouter = () => {
         </Route>
         <Route path="details/:id" element={ <Details/> }></Route>
         <Route path="city/*" element={ <City/> }></Route>
+        <Route path="/login" element={ <Login/> }></Route>
         <Route path="search/:keywords" element={ <Search/> }></Route>
       </Routes>
     </Router>

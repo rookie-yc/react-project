@@ -8,7 +8,7 @@ const LoadMore = (props) => {
   useEffect(() => {
     let winHeight = document.documentElement.clientHeight;
     let timer = null
-    window.addEventListener("scroll", () => {
+    function scorllHandle() {
       if(more.current) {
         setGetTop(more.current.getBoundingClientRect().top);
         if(timer) {
@@ -21,9 +21,13 @@ const LoadMore = (props) => {
           },300)
         }
       }
-    })
+    }
+    window.addEventListener("scroll", scorllHandle)
+    return () => {
+      // window.removeEventListener("scroll",scorllHandle)
+      // clearTimeout(timer)
+    }
   },[getTop])
-
   return(
     <div className="load" ref={ more }>
       加载更多

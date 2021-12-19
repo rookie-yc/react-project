@@ -1,7 +1,7 @@
-import React,{useState, useEffect} from "react";
-import api from "../../../api"
+import React from "react";
 import DetailsHeader from "../../../components/PubHeader";
 import Swiper from "../../../components/Swiper"
+import BuyAndStore from "../BuyAndStore";
 import "./style.less"
 
 const DetailsView = (props) => {
@@ -45,6 +45,7 @@ const DetailsView = (props) => {
             </div>
           </div>
           </div>
+          <BuyAndStore/>
         </div>
     </div>
   )
