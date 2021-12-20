@@ -12,6 +12,8 @@ const base = {
     details:"/api/details",
     login:"/api/login",
     comment:"/api/comment",
+    comentOrder:"/api/order/comment",
+    submitComment:"/api/order/submit/comment"
 }
 
 
@@ -56,6 +58,14 @@ const api = {
         return axios.get(base.baseUrl + base.comment,{
             params
         })
+    },
+    comentOrder(params){
+        return axios.get(base.baseUrl + base.comentOrder,{
+            params
+        })
+    },
+    submitComment(params){
+        return axios.post(base.baseUrl + base.submitComment,params)
     }
 }
 

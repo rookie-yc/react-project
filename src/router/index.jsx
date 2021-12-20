@@ -12,6 +12,7 @@ import City from "../pages/City";
 import Search from "../pages/Search";
 import Details from "../pages/Details";
 import Login from "../pages/Login";
+import Order from "../pages/Order";
 
 const AppRouter = () => {
   return (
@@ -26,6 +27,7 @@ const AppRouter = () => {
         <Route path="details/:id" element={ <Details/> }></Route>
         <Route path="city/*" element={ <City/> }></Route>
         <Route path="/login" element={ <Login/> }></Route>
+        <Route path="/order" element={ <Order/> }></Route>
         <Route path="search/:keywords" element={ <Search/> }></Route>
       </Routes>
     </Router>

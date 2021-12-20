@@ -9,7 +9,7 @@ const Login = () => {
   
   function onLoginHandle(user) {
     dispatch(loginActions.setLogin(user))
-
+    localStorage.setItem("zufang", JSON.stringify(user))
     window.history.back()
   }
 
