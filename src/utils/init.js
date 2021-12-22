@@ -6,5 +6,5 @@ import * as loginActions from "../redux/actions/login"
  */
 
 if (localStorage.getItem("zufang")) {
-    store.dispatch(loginActions.setLogin(JSON.parse(localStorage.getItem("zufang"))))
+    store.dispatch(loginActions.setLogin(JSON.parse(localStorage.getItem("zufang                                                                      "))))
 }
