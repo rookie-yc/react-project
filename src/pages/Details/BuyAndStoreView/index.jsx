@@ -48,7 +48,7 @@ const BuyAndStoreView = (props) => {
         let collects = props.collects;
         let id = props.id;
         return collects.some(item =>{
-            return item == id;
+            return item === id;
         })
     }
 
