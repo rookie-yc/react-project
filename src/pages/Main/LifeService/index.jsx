@@ -2,9 +2,9 @@ import React from "react";
 
 const LifeService = () => {
   return (
-    <div>
-      LifeService
-    </div>
+    <h2>
+      熵熵小仙女
+    </h2>
   )
 }
 

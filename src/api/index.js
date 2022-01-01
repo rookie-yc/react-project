@@ -4,7 +4,7 @@ import axios from "../utils/request"
  * 路径地址
  */
 const base = {
-    baseUrl:"http://localhost:7788",
+    baseUrl:"http://101.42.228.57:7788",
     cityUrl:"/api/aj/getcitycode",
     homehot1:"/api/home/hot1",
     homehot2:"/api/home/hot2",
