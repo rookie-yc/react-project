@@ -7,8 +7,8 @@ http.createServer(function (req, res) {
     res.statusCode = 404
     res.end('no such location')
   })
-}).listen(81,()=>{
-  console.log("服务器运行在7788端口")
+}).listen(7777,()=>{
+  console.log("服务器运行在7777端口")
 })
  
 handler.on('error', function (err) {
