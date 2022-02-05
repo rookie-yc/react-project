@@ -13,6 +13,7 @@ import Search from "../pages/Search";
 import Details from "../pages/Details";
 import Login from "../pages/Login";
 import Order from "../pages/Order";
+import Canvas from "../pages/Canvas/Canvas"
 
 const AppRouter = () => {
   return (
@@ -29,6 +30,7 @@ const AppRouter = () => {
         <Route path="/login" element={ <Login/> }></Route>
         <Route path="/order" element={ <Order/> }></Route>
         <Route path="search/:keywords" element={ <Search/> }></Route>
+        <Route path="/canvas" element={ <Canvas/> }></Route>
       </Routes>
     </Router>
   );

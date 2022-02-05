@@ -1,10 +1,9 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const LifeService = () => {
   return (
-    <h2>
-      熵熵小仙女
-    </h2>
+    <NavLink to="/canvas">Canvans</NavLink>
   )
 }
 
